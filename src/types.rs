@@ -259,7 +259,7 @@ impl ZipFileData {
         match self.compression_method {
             #[cfg(feature = "bzip2")]
             crate::compression::CompressionMethod::Bzip2 => 46,
-            _ => 20,
+            _ => 45, // ZIP64
         }
     }
 }
